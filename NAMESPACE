@@ -1,0 +1,26 @@
+# exportPattern("^[[:alpha:]]+")
+
+# single objects that have to be exportet, comma has to be in front of the line
+export(
+     AICweights
+    ,compareqqnorm
+    ,crosspoint  
+    ,dispersion_glmer
+    ,loo.cv
+    ,ocv  
+    ,triplot.normal.knownvariance
+    ,historyplot
+    ,WAIC
+	)
+
+importFrom(lme4, lmer, glmer, fixef, ranef)
+importFrom(arm, sim)
+importFrom(MuMIn, AICc)
+importFrom("MASS", "mvrnorm")
+importFrom("grDevices", "rainbow")
+importFrom("graphics", "lines", "par", "plot")
+importFrom("stats", "coef", "dbinom", "dnorm", "dpois", "fitted",
+              "hatvalues", "model.matrix", "qqline", "qqnorm", "resid",
+              "rnorm", "update", "var")
+
+

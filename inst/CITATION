@@ -1,0 +1,7 @@
+bibentry(
+     bibtype = "Book",
+     title = "Bayesian Data Analysis in Ecology using Linear Models with R, BUGS and Stan",
+     author = as.person("Fraenzi Korner-Nievergelt [aut], Tobias Roth [aut],  Stefanie von Felten [aut],  Jerome Guelat [aut], Bettina Almasi [aut], Pius Korner-Nievergelt [aut]"),
+     year = "2015",
+     publisher= "Elsevier"
+   )
