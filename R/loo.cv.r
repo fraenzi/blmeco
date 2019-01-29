@@ -14,7 +14,11 @@ loo.cv <- function(mod, nsim=100, bias.corr=FALSE){
   family <- mod$family$family
   if(is.null(family)) family <- "gaussian"
   link <- mod$family$link
-  if(is.null(link)|link=="identity") ilink <- "identity"
+  if(is.null(link)) {
+    ilink <- "identity"
+    link <- "identity"
+  }
+  if(link=="identity") ilink <- "identity"
   if(link=="log") ilink <- "exp"
   if(link=="logit") ilink <- "plogis"
   
