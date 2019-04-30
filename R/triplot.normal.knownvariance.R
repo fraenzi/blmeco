@@ -1,3 +1,11 @@
+# triplot.normal.knownvariance
+# function to explore the Bayesian theorem, just a simple case
+#---------------------------------------------------------------------------------------------------------------------------------
+
+# track of changes:
+# 30.4.2019: fixed the bug in the likelihood-function (replaced sqrt(variance.known) with variance.known. 
+# ## Thanks to Tiny van Boekel for spotting the mistake!
+
 triplot.normal.knownvariance <-
 function(theta.data, variance.known, n, prior.theta, prior.variance, 
          legend=TRUE, ylim=c(0, max(yposterior)), legend.bty="n"){
@@ -8,7 +16,7 @@ steplength <- (xlim[2]-xlim[1])/500
 xx <- seq(xlim[1], xlim[2], by=steplength)
 yprior <- dnorm(xx, mean=prior.theta, sd=sqrt(prior.variance))
 
-likelihood.function <- function(x, theta, variance.known) prod(1/(sqrt(2*pi*sqrt(variance.known)))*exp(-1/(2*variance.known)*(x-theta)^2))
+likelihood.function <- function(x, theta, variance.known) prod(1/(sqrt(2*pi*variance.known))*exp(-1/(2*variance.known)*(x-theta)^2))
 likelihood <- numeric(length(xx))
 for(i in 1:length(xx)) likelihood[i] <- likelihood.function(x, xx[i], variance.known=variance.known)
 
