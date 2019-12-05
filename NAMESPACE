@@ -15,7 +15,6 @@ export(
 
 importFrom(lme4, lmer, glmer, fixef, ranef)
 importFrom(arm, sim)
-importFrom(MuMIn, AICc)
 importFrom("MASS", "mvrnorm")
 importFrom("grDevices", "rainbow")
 importFrom("graphics", "lines", "par", "plot")
